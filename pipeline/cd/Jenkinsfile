@@ -1,7 +1,7 @@
 pipeline {
     agent {
       label {
-             label "slave"
+             label "Worker"
       }
     }
 
@@ -18,7 +18,7 @@ pipeline {
         stage('download_artifact') {
             steps {
                 sh """
-                sudo aws s3 cp s3://newdevopsbucket/webapp.war /opt/tomcat9/webapps/
+                sudo aws s3 cp s3://jandevopsbucket/webapp.war /opt/tomcat9/webapps/
                 """
             }
         }
