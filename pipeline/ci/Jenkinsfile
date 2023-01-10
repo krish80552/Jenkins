@@ -5,7 +5,7 @@ pipeline {
         stage('cloning') {
             steps {
                 sh '''
-                git clone https://github.com/KrishnaMouli/Krishna.git
+                git clone https://github.com/krish80552/Jenkins.git
                 '''
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('generating') {
             steps {
                 sh '''
-                cd Krishna/basic_code
+                cd basic_code
                 mvn clean install
                 '''
             }
